@@ -1,19 +1,17 @@
 INCLUDE Irvine32.inc
 
 .data
-result2 DWORD ?
+  result2 DWORD ?
 
 .code
 main:
-; Perform the equation 30 - 9 + 186 - 150
-mov eax, 30 ; eax = 30
-sub eax, 9 ; eax = eax - 9
-add eax, 186 ; eax = eax + 186
-sub eax, 150 ; eax = eax - 150
+  mov eax, 30 ; eax = 30
+  sub eax, 9 ; eax = eax - 9
+  add eax, 186 ; eax = eax + 186
+  sub eax, 150 ; eax = eax - 150
+  mov result2, eax
 
-mov result2, eax
-
-call WriteDec
+  call WriteDec
 
 exit
 end main
